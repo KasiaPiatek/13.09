@@ -36,3 +36,7 @@ exports.error = function(request, response) {
     response.end();
 }
 
+<<<<<<< HEAD
+=======
+export.handlers = handlers;
+>>>>>>> d271b86a1fb4ffbdba50fc7b6a75baafb11e082a
