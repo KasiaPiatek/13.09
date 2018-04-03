@@ -4,6 +4,7 @@ var fs = require('fs');
 exports.upload = function(request, response) {
     console.log("Rozpoczynam obsługę żądania upload.");
     var form = new formidable.IncomingForm();
+    form.uploadDir = "./upload/";
     form.parse(request, function(error, fields, files) {
         fs.renameSync(files.upload.path, "test.png");
         response.writeHead(200, {"Content-Type": "text/html"});
@@ -35,8 +36,3 @@ exports.error = function(request, response) {
     response.write("404 :(");
     response.end();
 }
-
-<<<<<<< HEAD
-=======
-export.handlers = handlers;
->>>>>>> d271b86a1fb4ffbdba50fc7b6a75baafb11e082a
