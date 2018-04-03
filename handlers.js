@@ -36,4 +36,4 @@ exports.error = function(request, response) {
     response.end();
 }
 
-export.handlers = handlers;
+exports.handlers = handlers;
